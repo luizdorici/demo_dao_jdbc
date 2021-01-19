@@ -28,6 +28,12 @@ public class Main2 {
 		departmentDao.insert(newDepartment);
 		System.out.println("Inserted! New id = " + newDepartment.getId());
 		
+		System.out.println("\n===== TESTE 4 - Department Update =====");
+		department = departmentDao.findById(6);
+		department.setName("Games");
+		departmentDao.update(department);
+		System.out.println("Update completed!");
+		
 		sc.close();
 	}
 
